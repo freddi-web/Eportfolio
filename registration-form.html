@@ -3,56 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration | ePortfolio</title>
+  <meta name="description" content="Register your interest in web development, software design, or technical consultation with FutureTech.">
+  <title>Registration | FutureTech Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">FutureTech<span>.dev</span></div>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">FutureTech<span>.dev</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="registration-form.html" class="active">Registration</a></li>
+      <li><a href="registration-form.html" aria-current="page">Registration</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Registration Form Section -->
-  <section class="section">
-    <h2>Client / Member Registration</h2>
-    <div class="card" style="max-width: 600px; margin: 0 auto;">
-      <form action="#" method="POST" class="form">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-        </div>
+  <main>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Work with FutureTech</p>
+        <h1>Tell me what you’re looking for</h1>
+        <p>Share your details and choose the area you’re interested in.</p>
+      </div>
+      <div class="card form-card">
+        <form action="/api/submit" method="POST" class="form" data-form-type="registration">
+          <input type="hidden" name="formType" value="registration">
+          <div class="form-group">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" maxlength="120" placeholder="Enter your full name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" maxlength="254" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service / interest</label>
+            <select id="service" name="service" required>
+              <option value="" selected disabled>Choose an area</option>
+              <option value="web-dev">Web Development</option>
+              <option value="software-design">Software Design</option>
+              <option value="consultation">Technical Consultation</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Register interest</button>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="service">Service / Interest</label>
-          <select id="service" name="service">
-            <option value="web-dev">Web Development</option>
-            <option value="software-design">Software Design</option>
-            <option value="consultation">Technical Consultation</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn">Register Now</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 FutureTech. All rights reserved.</p>
+    <p>&copy; 2026 FutureTech · Fredrick Mwendwa</p>
   </footer>
-
+  <script src="forms.js" defer></script>
 </body>
 </html>

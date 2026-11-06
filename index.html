@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fredrick Mwendwa | ePortifolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the portfolio of Fredrick Mwendwa, an ICT student focused on web development and software design.">
+  <title>Fredrick Mwendwa | FutureTech Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar-->
-     <nav class="navbar">
-        <div class="logo">FutureTech<span>.dev</span></div>
-        <ul class=""nav-links">
-            <li><a href="index.html"class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="registration-form.html">Registration</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        </ul>
-     </nav>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">FutureTech<span>.dev</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="registration-form.html">Registration</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-     <!-- Hero Section-->
-      <header class="hero">
-        <div class="hero-content">
-            <h1>Full-Stack Development & Systems Builders</h1>
-            <p>Specializing in software design, web applications, and robust backend solutions.</p>
-            <a href="gallery.html" class="btn">Explore My Work</a>
+  <main>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">ICT student · Developer · Builder</p>
+        <h1>Thoughtful software.<br><span>Real-world solutions.</span></h1>
+        <p>I’m Fredrick Mwendwa, a developer focused on creating useful web applications, reliable systems, and clear digital experiences.</p>
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn">Explore my work</a>
+          <a href="about.html" class="btn btn-secondary">Get to know me</a>
         </div>
-      </header>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="code-card">
+          <div class="code-card-top">
+            <span></span><span></span><span></span>
+            <p>building_ideas.dev</p>
+          </div>
+          <div class="code-lines">
+            <span>const developer = {</span>
+            <span>focus: "useful software",</span>
+            <span>mindset: "always learning",</span>
+            <span>};</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">What I do</p>
+        <h2>From the first idea to a working solution.</h2>
+        <p>I bring together practical software development skills and a thoughtful approach to solving problems.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <p class="card-label">01 / Build</p>
+          <h3>Web applications</h3>
+          <p>Responsive, user-focused experiences supported by dependable application logic.</p>
+        </article>
+        <article class="card">
+          <p class="card-label">02 / Design</p>
+          <h3>Systems &amp; software</h3>
+          <p>Structured software design, data management, and systems thinking for real-world needs.</p>
+        </article>
+      </div>
+      <p class="section-cta"><a class="btn btn-secondary" href="contact.html">Let’s connect</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FutureTech · Fredrick Mwendwa</p>
+  </footer>
 </body>
 </html>
